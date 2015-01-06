@@ -28,17 +28,17 @@ class StringCalculatorTests: XCTestCase {
   }
   
   func testOneNumberZeroReturnsSum() {
-    var stringCalculator = StringCalculator();
+    var stringCalculator = StringCalculator()
     XCTAssertEqual(0, stringCalculator.add("0"))
   }
   
   func testOneNumberActuallyReturnsSum() {
-    var stringCalculator = StringCalculator();
+    var stringCalculator = StringCalculator()
     XCTAssertEqual(1, stringCalculator.add("1"))
   }
   
   func testADifferentNumberActuallyReturnsSum() {
-    var stringCalculator = StringCalculator();
+    var stringCalculator = StringCalculator()
     XCTAssertEqual(2, stringCalculator.add("2"))
   }
   
