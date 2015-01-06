@@ -11,9 +11,11 @@ import XCTest
 
 class StringCalculatorTests: XCTestCase {
 
+  var _stringCalculator: StringCalculator = StringCalculator();
+  
   override func setUp() {
-    super.setUp()
     // Put setup code here. This method is called before the invocation of each test method in the class.
+    super.setUp()
   }
   
   override func tearDown() {
@@ -23,28 +25,34 @@ class StringCalculatorTests: XCTestCase {
 
   
   func testEmptyStringReturnsZero() {
-    var stringCalculator = StringCalculator()
-    XCTAssertEqual(0, stringCalculator.add(""))
+    XCTAssertEqual(0, _stringCalculator.add(""))
   }
   
   func testOneNumberZeroReturnsSum() {
-    var stringCalculator = StringCalculator()
-    XCTAssertEqual(0, stringCalculator.add("0"))
+    XCTAssertEqual(0, _stringCalculator.add("0"))
   }
   
   func testOneNumberActuallyReturnsSum() {
-    var stringCalculator = StringCalculator()
-    XCTAssertEqual(1, stringCalculator.add("1"))
+    XCTAssertEqual(1, _stringCalculator.add("1"))
   }
   
   func testADifferentNumberActuallyReturnsSum() {
-    var stringCalculator = StringCalculator()
-    XCTAssertEqual(2, stringCalculator.add("2"))
+    XCTAssertEqual(2, _stringCalculator.add("2"))
   }
   
   func testTwoNumbersReturnsSum() {
-    var stringCalculator = StringCalculator()
-    XCTAssertEqual(2, stringCalculator.add("1,1"))
+    XCTAssertEqual(3, _stringCalculator.add("1,2"))
   }
-
+  
+  func testThreeNumbersReturnsSum() {
+    XCTAssertEqual(6, _stringCalculator.add("1,2,3"));
+  }
+  
+  func testFourNumbersReturnsSum() {
+    XCTAssertEqual(8, _stringCalculator.add("1,2,2,3"))
+  }
+  
+  func testMultipleDelimeters() {
+    XCTAssertEqual(6, _stringCalculator.add("1\n2,3"))
+  }
 }
