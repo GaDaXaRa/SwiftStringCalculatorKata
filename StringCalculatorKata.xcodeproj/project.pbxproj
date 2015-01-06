@@ -8,11 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		EDD72CF71A5BBB7900C627FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD72CF61A5BBB7900C627FE /* AppDelegate.swift */; };
-		EDD72CF91A5BBB7900C627FE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD72CF81A5BBB7900C627FE /* ViewController.swift */; };
-		EDD72CFC1A5BBB7900C627FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDD72CFA1A5BBB7900C627FE /* Main.storyboard */; };
-		EDD72CFE1A5BBB7900C627FE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDD72CFD1A5BBB7900C627FE /* Images.xcassets */; };
-		EDD72D011A5BBB7900C627FE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDD72CFF1A5BBB7900C627FE /* LaunchScreen.xib */; };
-		EDD72D0D1A5BBB7900C627FE /* StringCalculatorKataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD72D0C1A5BBB7900C627FE /* StringCalculatorKataTests.swift */; };
+		EDD72D1E1A5BBCE000C627FE /* StringCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD72D1D1A5BBCE000C627FE /* StringCalculator.swift */; };
+		EDD72D1F1A5BBD1D00C627FE /* StringCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD72D1D1A5BBCE000C627FE /* StringCalculator.swift */; };
+		EDD72D211A5BC06700C627FE /* StringCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD72D201A5BC06700C627FE /* StringCalculatorTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +27,11 @@
 		EDD72CF11A5BBB7900C627FE /* StringCalculatorKata.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StringCalculatorKata.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDD72CF51A5BBB7900C627FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EDD72CF61A5BBB7900C627FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EDD72CF81A5BBB7900C627FE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		EDD72CFB1A5BBB7900C627FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		EDD72CFD1A5BBB7900C627FE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		EDD72D001A5BBB7900C627FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		EDD72D061A5BBB7900C627FE /* StringCalculatorKataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StringCalculatorKataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDD72D0B1A5BBB7900C627FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EDD72D0C1A5BBB7900C627FE /* StringCalculatorKataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringCalculatorKataTests.swift; sourceTree = "<group>"; };
+		EDD72D161A5BBBCA00C627FE /* StringCalculatorKataTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StringCalculatorKataTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		EDD72D1D1A5BBCE000C627FE /* StringCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringCalculator.swift; sourceTree = "<group>"; };
+		EDD72D201A5BC06700C627FE /* StringCalculatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringCalculatorTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,11 +73,8 @@
 		EDD72CF31A5BBB7900C627FE /* StringCalculatorKata */ = {
 			isa = PBXGroup;
 			children = (
+				EDD72D1B1A5BBCAA00C627FE /* classes */,
 				EDD72CF61A5BBB7900C627FE /* AppDelegate.swift */,
-				EDD72CF81A5BBB7900C627FE /* ViewController.swift */,
-				EDD72CFA1A5BBB7900C627FE /* Main.storyboard */,
-				EDD72CFD1A5BBB7900C627FE /* Images.xcassets */,
-				EDD72CFF1A5BBB7900C627FE /* LaunchScreen.xib */,
 				EDD72CF41A5BBB7900C627FE /* Supporting Files */,
 			);
 			path = StringCalculatorKata;
@@ -98,8 +91,9 @@
 		EDD72D091A5BBB7900C627FE /* StringCalculatorKataTests */ = {
 			isa = PBXGroup;
 			children = (
-				EDD72D0C1A5BBB7900C627FE /* StringCalculatorKataTests.swift */,
 				EDD72D0A1A5BBB7900C627FE /* Supporting Files */,
+				EDD72D201A5BC06700C627FE /* StringCalculatorTests.swift */,
+				EDD72D161A5BBBCA00C627FE /* StringCalculatorKataTests-Bridging-Header.h */,
 			);
 			path = StringCalculatorKataTests;
 			sourceTree = "<group>";
@@ -110,6 +104,22 @@
 				EDD72D0B1A5BBB7900C627FE /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EDD72D1B1A5BBCAA00C627FE /* classes */ = {
+			isa = PBXGroup;
+			children = (
+				EDD72D1C1A5BBCAA00C627FE /* StringCalculator */,
+			);
+			path = classes;
+			sourceTree = "<group>";
+		};
+		EDD72D1C1A5BBCAA00C627FE /* StringCalculator */ = {
+			isa = PBXGroup;
+			children = (
+				EDD72D1D1A5BBCE000C627FE /* StringCalculator.swift */,
+			);
+			path = StringCalculator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,9 +202,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDD72CFC1A5BBB7900C627FE /* Main.storyboard in Resources */,
-				EDD72D011A5BBB7900C627FE /* LaunchScreen.xib in Resources */,
-				EDD72CFE1A5BBB7900C627FE /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,7 +219,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDD72CF91A5BBB7900C627FE /* ViewController.swift in Sources */,
+				EDD72D1E1A5BBCE000C627FE /* StringCalculator.swift in Sources */,
 				EDD72CF71A5BBB7900C627FE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -221,7 +228,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDD72D0D1A5BBB7900C627FE /* StringCalculatorKataTests.swift in Sources */,
+				EDD72D211A5BC06700C627FE /* StringCalculatorTests.swift in Sources */,
+				EDD72D1F1A5BBD1D00C627FE /* StringCalculator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,25 +242,6 @@
 			targetProxy = EDD72D071A5BBB7900C627FE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		EDD72CFA1A5BBB7900C627FE /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EDD72CFB1A5BBB7900C627FE /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		EDD72CFF1A5BBB7900C627FE /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EDD72D001A5BBB7900C627FE /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		EDD72D0E1A5BBB7900C627FE /* Debug */ = {
@@ -339,6 +328,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = StringCalculatorKata/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -349,6 +339,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = StringCalculatorKata/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -358,6 +349,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -369,6 +361,8 @@
 				INFOPLIST_FILE = StringCalculatorKataTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "StringCalculatorKataTests/StringCalculatorKataTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StringCalculatorKata.app/StringCalculatorKata";
 			};
 			name = Debug;
@@ -377,6 +371,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -384,6 +379,7 @@
 				INFOPLIST_FILE = StringCalculatorKataTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "StringCalculatorKataTests/StringCalculatorKataTests-Bridging-Header.h";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StringCalculatorKata.app/StringCalculatorKata";
 			};
 			name = Release;
