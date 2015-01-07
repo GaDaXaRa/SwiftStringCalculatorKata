@@ -19,7 +19,7 @@ class StringCalculatorTests: XCTestCase {
   }
   
   override func tearDown() {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
+    // Put teardown code here. This method is called after the invocation of each test method in the class
     super.tearDown()
   }
 
@@ -68,5 +68,12 @@ class StringCalculatorTests: XCTestCase {
     XCTAssertEqual(5, _stringCalculator.add("//:\n5"))
   }
   
+  func testIgnoreLargeNumbers() {
+    XCTAssertEqual(
+      10,
+      _stringCalculator.add("10,1001"),
+      "Numbers greater than 1000 should be ignored"
+    )
+  }
 
 }

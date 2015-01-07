@@ -39,11 +39,13 @@ class StringCalculator: NSObject {
     
   }
   
+  let MAX_SUM_OPERAND: Int = 1000
+  
   private func sumArray(let numberArray: [String])
     -> Int {
       
     if (numberArray.count == 1) {
-      let numericValue:Int?  = numberArray[0].toInt()
+      let numericValue: Int?  = numberArray[0].toInt()
       if ((numericValue) != nil) {
         return numericValue!
       }
@@ -55,7 +57,10 @@ class StringCalculator: NSObject {
     
     var sum = 0
     for (var i = 0; i < numberArray.count; i++) {
-      sum += numberArray[i].toInt()!
+      let number = numberArray[i].toInt()!
+      if (number <= MAX_SUM_OPERAND) {
+        sum += number
+      }
     }
     
     return sum
