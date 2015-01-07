@@ -59,4 +59,14 @@ class StringCalculatorTests: XCTestCase {
   func testOptionalDelimeter() {
     XCTAssertEqual(3, _stringCalculator.add("//;\n1;2"), "optional delimeter should pass")
   }
+  
+  func testOtherOptionalDelimeter() {
+    XCTAssertEqual(4, _stringCalculator.add("//:\n2:2"))
+  }
+  
+  func testOptionalDelimeterWithASingleNumber() {
+    XCTAssertEqual(5, _stringCalculator.add("//:\n5"))
+  }
+  
+
 }

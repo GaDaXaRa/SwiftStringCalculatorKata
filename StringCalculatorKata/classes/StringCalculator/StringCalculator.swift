@@ -25,20 +25,40 @@ class StringCalculator: NSObject {
     if (inputLength == 1) {
       return numberString.toInt()!
     }
-    else if (inputLength > 1) {
+    
+    if (inputLength > 1) {
       let numberArray = numberString.componentsSeparatedByCharactersInSet(
         NSCharacterSet(charactersInString: delimeters)
       )
       
-      var sum = 0
-      for (var i = 0; i < numberArray.count; i++) {
-        sum += numberArray[i].toInt()!
-      }
-    
-      return sum
+      return sumArray(numberArray)
+      
     }
     
     return 0
+    
+  }
+  
+  private func sumArray(let numberArray: [String])
+    -> Int {
+      
+    if (numberArray.count == 1) {
+      let numericValue:Int?  = numberArray[0].toInt()
+      if ((numericValue) != nil) {
+        return numericValue!
+      }
+      else {
+        //not entirely sure if this is right, but what else would I return here?
+        return -1
+      }
+    }
+    
+    var sum = 0
+    for (var i = 0; i < numberArray.count; i++) {
+      sum += numberArray[i].toInt()!
+    }
+    
+    return sum
   }
   
   private func parseDelimeterLine(var numberString: NSString)
